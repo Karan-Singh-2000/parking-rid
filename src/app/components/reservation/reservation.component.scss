@@ -1,0 +1,27 @@
+.reservation-container {
+    // background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px
+}
+
+.mat-card {
+    // background-color: white;
+    border: 1px solid grey;
+    border-radius: 0.5px;
+    width: 80px;
+    color: white
+
+}
+
+.ground-card {
+    margin-right: 70px;
+    background-color:gray;
+}
+
+.first-card {
+    margin-left: 300px;
+    background-color: gray;
+}
+

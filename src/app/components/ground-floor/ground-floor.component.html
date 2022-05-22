@@ -1,0 +1,16 @@
+<p class="text">
+    <mat-grid-list cols="4" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let slot of slots">
+            <mat-card>
+                <mat-card-title> Slot no: {{slot}}</mat-card-title>
+                <mat-card-actions>
+                  <button mat-button (click)="onReserve()">RESERVE</button>
+                </mat-card-actions>
+              </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</p>
+
+<p-dialog header="Title" [(visible)]="isShow"  [style]="{width: '50vw'}">
+    Parking slot is reserved successfully!!!
+</p-dialog>
