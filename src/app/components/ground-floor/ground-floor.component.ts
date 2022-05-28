@@ -8,7 +8,7 @@ import { ConfirmationService } from 'primeng/api';
 })
 export class GroundFloorComponent implements OnInit {
 
-  slots = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+   slots = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12];
 
   isShow = false;
   constructor(private confirmationService: ConfirmationService) { }

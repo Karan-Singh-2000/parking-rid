@@ -14,6 +14,7 @@ import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {ConfirmationService} from 'primeng/api';
 import {DialogModule} from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FirstFloorComponent } from './first-floor/first-floor.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     // ReservedComponent,
     ReservationComponent,
     GroundFloorComponent,
+    FirstFloorComponent,
     // Freecomponent
   ],
   imports: [
