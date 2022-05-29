@@ -17,11 +17,31 @@
 
 .ground-card {
     margin-right: 70px;
-    background-color:gray;
+    background-color:black;
+    button {
+    color: blanchedalmond;
+
+    background-color: black;
+        height: 90px;
+        width: 150px;
+    }
+
+
 }
 
 .first-card {
     margin-left: 300px;
-    background-color: gray;
+    background-color: black;
+    height: 90px;
+    width: 150px;
+    button {
+    background-color: black;
+    color: blanchedalmond;
+        height: 90px;
+        width: 150px;
+    }
 }
 
+h1 {
+    text-align: center;
+}

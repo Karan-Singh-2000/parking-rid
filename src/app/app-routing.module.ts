@@ -9,7 +9,13 @@ const routes: Routes = [
         loadChildren: () => import(`./components/first-floor/first-floor.module`).then(
           module => module.FirstFloorModule
         )
-    }    
+    },
+    { 
+        path: 'g1', 
+        loadChildren: () => import(`./components/ground-floor/ground-floor.module`).then(
+          module => module.GroundFloorModule
+        )
+    }
 ]
 
 @NgModule({
