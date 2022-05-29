@@ -1,0 +1,146 @@
+    <h1>RESERVE / EXIT</h1>
+
+    <span>
+      <mat-grid-list cols="4" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let slot of slots; let i=index">
+            <mat-card>
+                <mat-card-title> Slot no: {{i + 1}}</mat-card-title>
+                <mat-card-actions>
+                  <button *ngIf="slot" class="reserve" mat-button (click)="onReserve(i)">RESERVE</button>
+                  <button *ngIf="!slot" class="exit" mat-button (click)="onExit(i)">EXIT</button>
+                </mat-card-actions>
+              </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </span>
+
+    <p-dialog header="Title" [(visible)]="display" [style]="{width: '50vw'}">
+      Name: <input #name type="text" (keyup)="keyup(name.value)">
+      Vehicle Number: <input #vehicle type="text" (keyup)="keyupVehicle(vehicle.value)">
+      <button (click)="reserveDone()">Done</button>
+    </p-dialog>
+
+    <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+
+    <!-- <button (click)="confirm()" pButton icon="pi pi-check" label="Confirm"></button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <mat-grid-list cols="4" rowHeight="2:1">
+        <mat-grid-tile >
+            <mat-card>
+                <mat-card-title>Slot No. 1</mat-card-title>
+                <mat-card-actions>
+                  <button *ngIf="firstFloorAvailable[0]" mat-button (click)="onReserve(1)">RESERVE</button>
+                </mat-card-actions>
+              </mat-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-card>
+              <mat-card-title>Slot No. 2</mat-card-title>
+              <mat-card-actions>
+                <button mat-button (click)="onReserve(2)">RESERVE</button>
+              </mat-card-actions>
+            </mat-card>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-card>
+            <mat-card-title>Slot No. 3</mat-card-title>
+            <mat-card-actions>
+              <button mat-button (click)="onReserve(3)">RESERVE</button>
+            </mat-card-actions>
+          </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card>
+          <mat-card-title>Slot No. 4</mat-card-title>
+          <mat-card-actions>
+            <button mat-button (click)="onReserve(4)">RESERVE</button>
+          </mat-card-actions>
+        </mat-card>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <mat-card>
+        <mat-card-title>Slot No. 5</mat-card-title>
+        <mat-card-actions>
+          <button mat-button (click)="onReserve(5)">RESERVE</button>
+        </mat-card-actions>
+      </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile>
+  <mat-card>
+      <mat-card-title>Slot No. 6</mat-card-title>
+      <mat-card-actions>
+        <button mat-button (click)="onReserve(6)">RESERVE</button>
+      </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile>
+  <mat-card>
+      <mat-card-title>Slot No. 7</mat-card-title>
+      <mat-card-actions>
+        <button mat-button (click)="onReserve(7)">RESERVE</button>
+      </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile>
+  <mat-card>
+      <mat-card-title> Slot No. 8</mat-card-title>
+      <mat-card-actions>
+        <button mat-button (click)="onReserve(8)">RESERVE</button>
+      </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile>
+  <mat-card>
+      <mat-card-title>Slot No. 9</mat-card-title>
+      <mat-card-actions>
+        <button mat-button (click)="onReserve(9)">RESERVE</button>
+      </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile>
+  <mat-card>
+      <mat-card-title>Slot No. 10</mat-card-title>
+      <mat-card-actions>
+        <button mat-button (click)="onReserve(10)">RESERVE</button>
+      </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile>
+  <mat-card>
+      <mat-card-title>Slot No. 11</mat-card-title>
+      <mat-card-actions>
+        <button mat-button (click)="onReserve(11)">RESERVE</button>
+      </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile>
+  <mat-card>
+      <mat-card-title>Slot No. 12</mat-card-title>
+      <mat-card-actions>
+        <button mat-button (click)="onReserve(12)">RESERVE</button>
+      </mat-card-actions>
+    </mat-card>
+</mat-grid-tile>
+</mat-grid-list> -->

@@ -24,4 +24,12 @@ export class AppService {
             catchError((error: HttpErrorResponse) => throwError(error))
         );
     }
+
+    getFirstFloor() {
+        const apiUrl = `${this.apiPath}/first-floor`;
+
+        return this.httpClient.get<any>(apiUrl).pipe(
+            catchError((error: HttpErrorResponse) => throwError(error))
+        );
+    }
 }

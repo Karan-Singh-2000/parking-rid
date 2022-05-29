@@ -4,38 +4,36 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
-// import { ReservedComponent } from './components/reserved/reserved.component';
-import { ReservationComponent } from './components/reservation/reservation.component';
-// import { ReservedModule } from './components/reserved/reserved.module';
-import{MatCardModule} from '@angular/material/card';
-import { GroundFloorComponent } from './components/ground-floor/ground-floor.component';
+import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {ConfirmDialogModule} from 'primeng/confirmdialog';
-import {ConfirmationService} from 'primeng/api';
-import {DialogModule} from 'primeng/dialog';
+import { ConfirmationService } from 'primeng/api';
+import { DialogModule } from 'primeng/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FirstFloorComponent } from './first-floor/first-floor.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ReservationComponent } from './components/reservation/reservation.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { SharedModule  } from './modules/shared.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    // ReservedComponent,
-    ReservationComponent,
-    GroundFloorComponent,
-    FirstFloorComponent,
-    // Freecomponent
+    AppComponent
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
     BrowserModule,
+    CommonModule,
     HttpClientModule,
     MatCardModule,
     MatGridListModule,
-    ConfirmDialogModule,
     DialogModule,
-    BrowserAnimationsModule
-    // ReservedModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    SharedModule,
   ],
   providers: [AppService, ConfirmationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ReservationComponent],
+  exports: [SharedModule]
 })
 export class AppModule { }

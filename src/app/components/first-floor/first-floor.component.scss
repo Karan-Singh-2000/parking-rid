@@ -1,0 +1,25 @@
+mat-card {
+    border: 1px solid grey;
+    grid: px solid black;
+}
+
+mat-grid-tile {
+    background-color: lightgray;
+}
+
+.reserve {
+    background-color: green;
+    color: black;
+}
+
+.exit {
+    background-color: red;
+    color: black
+}
+
+::ng-deep body .p-dialog {
+    width: 391px;
+    height: 126px;
+    background-color: white;
+    padding: 14px;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ReservationService } from './reservation.service';
 @Component({
   selector: 'app-reservation',
   templateUrl: './reservation.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReservationComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    console.log('under reservation');
+  }
 
   ngOnInit(): void {
+
   }
 
 }
